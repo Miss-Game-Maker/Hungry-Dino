@@ -1,0 +1,65 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!78 &1
+TagManager:
+  serializedVersion: 2
+  tags:
+  - Enemy
+  - Tiles
+  - Pizza
+  - Slime
+  - Point
+  - Heart
+  - GameOver
+  layers:
+  - Default
+  - TransparentFX
+  - Ignore Raycast
+  - 
+  - Water
+  - UI
+  - Background
+  - Foreground
+  - Player
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  - 
+  m_SortingLayers:
+  - name: Default
+    uniqueID: 0
+    locked: 0
+  - name: Background
+    uniqueID: 4076974785
+    locked: 0
+  - name: Character
+    uniqueID: 1972087723
+    locked: 0
+  - name: Tiles
+    uniqueID: 1929781279
+    locked: 0
+  - name: UI
+    uniqueID: 2485265965
+    locked: 0
+  - name: Menu
+    uniqueID: 1164884573
+    locked: 0
