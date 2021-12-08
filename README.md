@@ -2,7 +2,7 @@
 
 A game about Dino catching falling Pizza to get more points and lose health when it catches any slime.
 
-![hungry-dino](https://img.itch.zone/aW1nLzc2MTY2NzkuanBn/original/2MvdTR.jpg "hungry-dino")
+![hungry-dino](https://img.itch.zone/aW1hZ2UvMTMwOTUzMy83NjE3MTM5LnBuZw==/original/sjdyN6.png "hungry-dino")
 
 # **INSTRUCTIONS**
 
