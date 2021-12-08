@@ -30,9 +30,11 @@ public class HeartManager : MonoBehaviour
     {
         if (Health == 0)
         {
+            AudioController.AudioPause((int)AudioType.BGM);
             if (Input.GetKeyDown("space"))
             {
                 PlayerPrefs.SetInt("High Score", GetComponent<PlayerMovement>().highScoreCounter);
+                AudioController.AudioResume((int)AudioType.BGM);
                 SceneManager.LoadScene(SceneManager.GetActiveScene().name);
             }
         }

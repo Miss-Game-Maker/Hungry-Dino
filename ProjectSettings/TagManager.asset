@@ -11,6 +11,7 @@ TagManager:
   - Point
   - Heart
   - GameOver
+  - AudioSources
   layers:
   - Default
   - TransparentFX

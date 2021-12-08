@@ -28,7 +28,7 @@ public class CollisionManager : MonoBehaviour
         rb.velocity = new UnityEngine.Vector2(0, yVelocity);
     }
 
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Finish")
         {

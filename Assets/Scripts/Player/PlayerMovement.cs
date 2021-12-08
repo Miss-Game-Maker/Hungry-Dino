@@ -1,5 +1,6 @@
 using UnityEngine;
 using TMPro;
+using Unity.VisualScripting;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -16,6 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [HideInInspector]
     public int highScoreCounter;
     private HeartManager healthCounter;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -27,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         pointText.text = pointCounter.ToString();
         highScoreCounter = PlayerPrefs.GetInt("High Score");
         highScoreText.text = highScoreCounter.ToString();
+
 
     }
 
@@ -60,8 +63,7 @@ public class PlayerMovement : MonoBehaviour
             transform.eulerAngles = new UnityEngine.Vector3(0, 180, 0);
         }
     }
-
-    void OnCollisionEnter2D(Collision2D col)
+    void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.tag == "Pizza")
         {
@@ -72,6 +74,7 @@ public class PlayerMovement : MonoBehaviour
                 highScoreCounter = pointCounter;
                 highScoreText.text = pointCounter.ToString();
             }
+            AudioController.AudioPlayOnce((int)AudioType.EAT);
             Destroy(col.gameObject);
         }
         else if (col.gameObject.tag == "Slime")
@@ -79,6 +82,7 @@ public class PlayerMovement : MonoBehaviour
             healthCounter.Health -= 1;
             healthCounter.UpdateHealthUI();
             pointText.text = pointCounter.ToString();
+            AudioController.AudioPlayOnce((int)AudioType.HIT);
             Destroy(col.gameObject);
         }
         else if (col.gameObject.tag == "Heart")
@@ -88,6 +92,7 @@ public class PlayerMovement : MonoBehaviour
                 healthCounter.Health += 1;
             }
             healthCounter.UpdateHealthUI();
+            AudioController.AudioPlayOnce((int)AudioType.HEART);
             Destroy(col.gameObject);
         }
     }
